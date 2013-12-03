@@ -30,6 +30,7 @@
 		<Loop name="L837" max="5000" comment="This X12 Transaction Set contains the format and establishes the data contents of the Professional Healthcare Claim Transaction Set (837p) for use within the context of an Electronic Data Interchange (EDI) environment.">
 			<Segment name="ST"  max="1" required="y" />
 			<Segment name="BHT" max="1" required="y" />
+			<Segment name="REF" max="1"  required="n" comment="Transmission type identification"/>
 			<Loop name="L1000A" max="1" required="y">
 				<Segment name="NM1" max="1"  required="y" comment="Submitter EDI name"/>
 				<Segment name="PER" max="2"  required="y" comment="Submitter EDI contact information"/>
@@ -157,7 +158,7 @@
 				<Loop name="L2330B" max="1" required="n">
 					<Segment name="NM1" max="1"  required="y" comment="Other payer name" />
 					<Segment name="N3"  max="1"  required="n" comment="Other payer address"/>
-					<Segment name="N4"  max="1"  required="y" comment="Other payer city/state/zip"/>
+					<Segment name="N4"  max="1"  required="n" comment="Other payer city/state/zip"/>
 					<Segment name="DTP" max="1"  required="n" comment="Date - claim check or remittance date" />			
 					<Segment name="REF" max="6"  required="n" comment="Other reference information. Up to 6 different references can be associated to an 837p" />	
 				</Loop>		
