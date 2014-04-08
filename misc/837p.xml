@@ -2,8 +2,8 @@
    This file is part of the X12Parser library that provides tools to
    manipulate X12 messages using Ruby native syntax.
 
-   http://x12parser.rubyforge.org 
-   
+   http://x12parser.rubyforge.org
+
    Copyright (C) 2012 P&D Technical Solutions, LLC
 
    This library is free software; you can redistribute it and/or
@@ -20,13 +20,13 @@
    License along with this library; if not, write to the Free Software
    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
-   $Id: 837p.xml 2012-11-23 mjp using version 5010 $  
+   $Id: 837p.xml 2012-11-23 mjp using version 5010 $
 -->
 
 <Definition>
 	<Loop name="837p" required="y">
 		<Segment name="ISA" max="1" required="y" />
-		<Segment name="GS"  max="1" required="y" />	
+		<Segment name="GS"  max="1" required="y" />
 		<Loop name="L837" max="5000" comment="This X12 Transaction Set contains the format and establishes the data contents of the Professional Healthcare Claim Transaction Set (837p) for use within the context of an Electronic Data Interchange (EDI) environment.">
 			<Segment name="ST"  max="1" required="y" />
 			<Segment name="BHT" max="1" required="y" />
@@ -34,7 +34,7 @@
 			<Loop name="L1000A" max="1" required="y">
 				<Segment name="NM1" max="1"  required="y" comment="Submitter EDI name"/>
 				<Segment name="PER" max="2"  required="y" comment="Submitter EDI contact information"/>
-			</Loop>	
+			</Loop>
 			<Loop name="L1000B" max="1" required="y">
 				<Segment name="NM1" max="1" required="y" comment="Receiver name"/>
 			</Loop>
@@ -67,20 +67,20 @@
 				<Segment name="HL"  max="1"  required="y" comment="Subscriber heiarchical level"/>
 				<Segment name="SBR" max="1"  required="y" comment="subscriber information"/>
 				<Segment name="PAT" max="1"  required="n" comment="Patient information"/>
-				
+
 				<Loop name="L2010BA" max="1" required="y">
 					<Segment name="NM1" max="1"  required="y" comment="Subscriber name"/>
 					<Segment name="N3"  max="1"  required="n" comment="Subscriber address"/>
 					<Segment name="N4"  max="1"  required="n" comment="Subscriber city/state/zip"/>
 					<Segment name="DMG" max="1"  required="n" comment="Subscriber demographic information"/>
-					<Segment name="REF" max="2"  required="n"/>			
+					<Segment name="REF" max="2"  required="n"/>
 					<Segment name="PER" max="1"  required="n" comment="Property and casualty subscriber contact information"/>
 				</Loop>
 				<Loop name="L2010BB" max="1" required="y">
 					<Segment name="NM1" max="1"  required="y" comment="Payer name"/>
 					<Segment name="N3"  max="1"  required="n" comment="Payer address"/>
 					<Segment name="N4"  max="1"  required="n" comment="Payer city/state/zip code"/>
-					<Segment name="REF" max="5"  required="n" />			
+					<Segment name="REF" max="5"  required="n" />
 				</Loop>
 			</Loop>
 			<Loop name="L2000C" required="n">
@@ -90,7 +90,7 @@
 					<Segment name="NM1" max="1"  required="y" comment="Patient name"/>
 					<Segment name="N3"  max="1"  required="y" comment="Patient address"/>
 					<Segment name="N4"  max="1"  required="y" comment="Patient city/state/zip"/>
-					<Segment name="DMG" max="1"  required="y" comment="Patient demographic information"/>		
+					<Segment name="DMG" max="1"  required="y" comment="Patient demographic information"/>
 					<Segment name="REF" max="1"  required="n" comment="Property and casualty claim number"/>
 					<Segment name="PER" max="1"  required="n" comment="Property and casualty subscriber contact information"/>
 				</Loop>
@@ -101,7 +101,7 @@
 				<Segment name="PWK" max="10" required="n" comment="Claim supplemental information" />
 				<Segment name="CN1" max="1"  required="n" comment="Contract information" />
 				<Segment name="AMT" max="1"  required="n" comment="Patient amount paid" />
-				<Segment name="REF" max="14" required="n" comment="Claim References.  Up to 14 different claim references can be set for a 837p" />			
+				<Segment name="REF" max="14" required="n" comment="Claim References.  Up to 14 different claim references can be set for a 837p" />
 				<Segment name="K3"  max="10" required="n" comment="File information" />
 				<Segment name="NTE" max="1"  required="n" comment="Claim note" />
 				<Segment name="CR1" max="1"  required="n" comment="Ambulance transport information" />
@@ -110,8 +110,8 @@
 				<Segment name="HI"  max="1"  required="y" comment="Healthcare diagnostic code" />
 				<Segment name="HI"  max="1"  required="n" comment="Anesthesia related procedure code" />
 				<Segment name="HI"  max="2"  required="n" comment="Condition information" />
-				<Segment name="HCP" max="1"  required="n" comment="Claim pricing / repricing information" />			
-					
+				<Segment name="HCP" max="1"  required="n" comment="Claim pricing / repricing information" />
+
 				<Loop name="L2310A" max="1" required="n">
 					<Segment name="NM1" max="1"  required="y" comment="Referring provider name"/>
 					<Segment name="REF" max="3"  required="n" comment="Referring provider secondary id"/>
@@ -119,18 +119,18 @@
 				<Loop name="L2310B" max="1" required="n">
 					<Segment name="NM1" max="1"  required="n" comment="Rendering provider name"/>
 					<Segment name="PRV" max="1"  required="n" comment="Rendering provider specialty information"/>
-					<Segment name="REF" max="4"  required="n" comment="Rendering provider secondary id"/>			
+					<Segment name="REF" max="4"  required="n" comment="Rendering provider secondary id"/>
 				</Loop>
 				<Loop name="L2310C" required="n">
 					<Segment name="NM1" max="1"  required="y" comment="Service facility location"/>
 					<Segment name="N3"  max="1"  required="y" comment="Service facility address"/>
 					<Segment name="N4"  max="1"  required="y" comment="Service facility city/state/zip"/>
-					<Segment name="REF" max="3"  required="n" comment="Service facility location secondary id"/>	
+					<Segment name="REF" max="3"  required="n" comment="Service facility location secondary id"/>
 					<Segment name="PER" max="1"  required="n" comment="Service facility contact information"/>
 				</Loop>
 				<Loop name="L2310D" max="1" required="n">
 					<Segment name="NM1" max="1"  required="n" comment="Supervising provider name"/>
-					<Segment name="REF" max="4"  required="n" comment="Supervising provider secondary id"/>			
+					<Segment name="REF" max="4"  required="n" comment="Supervising provider secondary id"/>
 				</Loop>
 				<Loop name="L2310E" max="1" required="n">
 					<Segment name="NM1" max="1"  required="y" comment="Ambulance pick up location"/>
@@ -153,15 +153,15 @@
 					<Segment name="NM1" max="1"  required="y" comment="Other subscriber name"/>
 					<Segment name="N3"  max="1"  required="n" comment="Other subscriber address"/>
 					<Segment name="N4"  max="1"  required="y" comment="Other subscriber city/state/zip"/>
-					<Segment name="REF" max="1"  required="n" comment="Other subscriber location secondary id"/>	
+					<Segment name="REF" max="1"  required="n" comment="Other subscriber location secondary id"/>
 				</Loop>
 				<Loop name="L2330B" max="1" required="n">
 					<Segment name="NM1" max="1"  required="y" comment="Other payer name" />
 					<Segment name="N3"  max="1"  required="n" comment="Other payer address"/>
 					<Segment name="N4"  max="1"  required="n" comment="Other payer city/state/zip"/>
-					<Segment name="DTP" max="1"  required="n" comment="Date - claim check or remittance date" />			
-					<Segment name="REF" max="6"  required="n" comment="Other reference information. Up to 6 different references can be associated to an 837p" />	
-				</Loop>		
+					<Segment name="DTP" max="1"  required="n" comment="Date - claim check or remittance date" />
+					<Segment name="REF" max="6"  required="n" comment="Other reference information. Up to 6 different references can be associated to an 837p" />
+				</Loop>
 				<Loop name="L2330CDEFG" max="6" required="n" comment="Loops 2330C through 2330G combined for inbound transactions, application needs to determine the correct loop being provided.">
 					<Segment name="NM1" max="1"  required="y" comment="Name" />
 					<Segment name="REF" max="3"  required="y" comment="Secondary id"/>
@@ -212,7 +212,7 @@
 				</Loop>
 				<Loop name="L2420D" max="1" required="n">
 					<Segment name="NM1" max="1"  required="n" comment="Supervising provider name" />
-					<Segment name="REF" max="20" required="n" comment="Supervising provider secondary id" />			
+					<Segment name="REF" max="20" required="n" comment="Supervising provider secondary id" />
 				</Loop>
 				<Loop name="L2420E" required="n">
 					<Segment name="NM1" max="1"  required="n" comment="Ordering provider name" />
@@ -223,7 +223,7 @@
 				</Loop>
 				<Loop name="L2420F" max="2" required="n">
 					<Segment name="NM1" max="1"  required="n" comment="Refering provider name" />
-					<Segment name="REF" max="20" required="n" comment="Refering provider secondary id" />						
+					<Segment name="REF" max="20" required="n" comment="Refering provider secondary id" />
 				</Loop>
 				<Loop name="L2420G" max="1" required="n">
 					<Segment name="NM1" max="1"  required="n" comment="Ambulance pickup information" />
@@ -233,7 +233,7 @@
 				<Loop name="L2420H" max="1" required="n">
 					<Segment name="NM1" max="1"  required="n" comment="Ambulance dropoff information" />
 					<Segment name="N3"  max="1"  required="y" comment="Ambulance dropoff address" />
-					<Segment name="N4"  max="1"  required="y" comment="Ambulance dropoff city/state/zip" />			
+					<Segment name="N4"  max="1"  required="y" comment="Ambulance dropoff city/state/zip" />
 				</Loop>
 				<Loop name="L2430" max="15" required="n">
 					<Segment name="SVD" max="1"  required="n" comment="Line adjudication information" />
@@ -241,9 +241,9 @@
 					<Segment name="DTP" max="1"  required="y" comment="Line check or remittance date" />
 					<Segment name="AMT" max="1"  required="n" comment="Remaining patient liability" />
 					<Segment name="LQ"  max="1"  required="n" comment="Form identification code" />
-					<Segment name="FRM" max="99" required="n" comment="Supporting documentation" />			
-				</Loop>			
-			</Loop>			
+					<Segment name="FRM" max="99" required="n" comment="Supporting documentation" />
+				</Loop>
+			</Loop>
 			<Segment name="SE" required="y" />
 		</Loop>
 		<Segment name="GE"  max="1" required="y"/>
