@@ -122,11 +122,9 @@
 					<Segment name="REF" max="4"  required="n" comment="Operating Physician secondary id"/>
 				</Loop>
 				<Loop name="L2310C" required="n" comment="Other Operating Physician">
-					<Segment name="NM1" max="1"  required="y" comment="Other Operating Physician location"/>
-					<Segment name="N3"  max="1"  required="y" comment="Other Operating Physician address"/>
-					<Segment name="N4"  max="1"  required="y" comment="Other Operating Physician city/state/zip"/>
+					<Segment name="NM1" max="1"  required="n" comment="Other Operating Physician location"/>
+					<Segment name="PRV" max="1"  required="y" comment="Operating Physician specialty information"/>
 					<Segment name="REF" max="3"  required="n" comment="Other Operating Physician location secondary id"/>
-					<Segment name="PER" max="1"  required="n" comment="Other Operating Physician contact information"/>
 				</Loop>
 				<Loop name="L2310D" max="1" required="n" comment="Rendering Physician">
 					<Segment name="NM1" max="1"  required="n" comment="Rendering provider name"/>
