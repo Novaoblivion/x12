@@ -211,7 +211,7 @@
 					<Segment name="AMT" max="1"  required="n" comment="Remaining patient liability" />
 				</Loop>
 			</Loop>
-			<Segment name="PLB" comment="To convey provider level adjustment information for debit or credit transactions such as, accelerated payments, cost report settlements for a fiscal year and timeliness report penalties unrelated to a specific claim or service">
+			<Segment name="PLB" comment="To convey provider level adjustment information for debit or credit transactions such as, accelerated payments, cost report settlements for a fiscal year and timeliness report penalties unrelated to a specific claim or service" />
 			<Segment name="SE" required="y" />
 		</Loop>
 		<Segment name="GE"  max="1" required="y"/>
