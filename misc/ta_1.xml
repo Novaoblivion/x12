@@ -20,13 +20,13 @@
    License along with this library; if not, write to the Free Software
    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
-   $Id: TA1.xml 78 2014-07-07 16:12:26Z ww $
+   $Id: ta_1.xml 78 2014-07-07 16:12:26Z ww $
 -->
 
-<Segment name="TA1" comment="Acknowledgment of transaction">
-  <Field name="InterchangeControlNumber" type="int" required="y" min="9"  max="9" comment="A control number assigned by the interchange sender"/>
-  <Field name="InterchangeDate"                     required="y" min="6"  max="6" comment="Date of the interchange"/>
-  <Field name="InterchangeTime"                     required="y" min="4"  max="4" comment="Time of the interchange"/>
-  <Field name="InterchangeAcknowledgmentCode"       required="y" min="1"  max="1" comment="Code sent by the sender to indicate the status of the transaction"/>
-  <Field name="InterchangeNoteCode"                 required="y" min="0"  max="3" comment="Error Code"/>
-</Segment>
+<Definition>
+  <Loop name="TA_1" required="y">
+    <Segment name="ISA" max="1" required="y" />
+    <Segment name="TA1" max="1" required="y" />
+    <Segment name="IEA" max="1" required="y" />
+  </Loop>
+</Definition>
