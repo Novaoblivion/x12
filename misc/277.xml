@@ -84,27 +84,6 @@
 					</Loop>
 				</Loop>
 			</Loop>
-			<Loop name="L2000E" max="1" required="n" comment="Dependent Level">
-				<Segment name="HL"  max="1" required="n" comment="Dependent Level" />
-				<Segment name="DMG" max="1" required="y" comment="Dependent Demographic Information" />
-				<Loop name="L2100E" max="1" comment="Dependent Name">
-					<Segment name="NM1" max="1" required="y" comment="Dependent Name" />
-				</Loop>
-				<Loop name="L2200E" max="1" comment="Claim Submitter Trace Number">
-					<Segment name="TRN" max="1" required="y" comment="Claim Subimtter Trace Number" />
-					<Segment name="STC" max="inf" required="y" comment="Claim Level Status Information" />
-					<Segment name="QTY" max="1" required="n" />
-					<Segment name="AMT" max="1" required="n" />
-					<Segment name="REF" max="3" required="y" />
-					<Segment name="DTP" max="1" required="n" comment="CLaim Service Date" />
-					<Loop name="L2220E" max="1" comment="Service Line Information">
-						<Segment name="SVC" max="1" required="n" comment="Service Line Information" />
-						<Segment name="STC" max="inf" required="n" comment="Service Line Status Information" />
-						<Segment name="REF" max="1" required="n" comment="Service Line Item Identification" />
-						<Segment name="DTP" max="1" required="n" comment="Service Line Date" />
-					</Loop>
-				</Loop>
-			</Loop>
 			<Segment name="SE" required="y" />
 		</Loop>
 		<Segment name="GE"  max="1" required="y"/>
