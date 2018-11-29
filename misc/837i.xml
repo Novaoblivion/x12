@@ -179,36 +179,37 @@
 					<Segment name="AMT" max="2"  required="n" />
 					<Segment name="NTE" max="1"  required="n" comment="third party organization ntoes" />
 					<Segment name="HCP" max="1"  required="n" comment="Line pricing/repricing information" />
-				</Loop>
-				<Loop name="L2410" max="1" required="n" >
-					<Segment name="LIN" max="1"  required="n" comment="Drug identification" />
-					<Segment name="CTP" max="1"  required="y" comment="Drug Quantity" />
-					<Segment name="REF" max="1"  required="n" comment="Prescription or compound drug association number" />
-				</Loop>
-				<Loop name="L2420A" max="1" required="n" >
-					<Segment name="NM1" max="1"  required="n" comment="Rendering provider name" />
-					<Segment name="PRV" max="1"  required="n" comment="Rendering provider specialty information" />
-					<Segment name="REF" max="20" required="n" comment="Rendering provider secondary id" />
-				</Loop>
-				<Loop name="L2420B" max="1" required="n" >
-					<Segment name="NM1" max="1"  required="n" comment="Purchased service provider name" />
-					<Segment name="REF" max="20" required="n" comment="Purchased service provider secondary id" />
-				</Loop>
-				<Loop name="L2420C" max="1" required="n" comment="Rendering Provider">
-					<Segment name="NM1" max="1"  required="n" comment="Rendering Provider location name" />
-					<Segment name="N3"  max="1"  required="y" comment="Rendering Provider location address" />
-					<Segment name="N4"  max="1"  required="y" comment="Rendering Provider location city/state/zip" />
-					<Segment name="REF" max="3"  required="n" comment="Rendering Provider location secondary id" />
-				</Loop>
-				<Loop name="L2420D" max="1" required="n" comment="Refering Provider">
-					<Segment name="NM1" max="1"  required="n" comment="Refering Provider provider name" />
-					<Segment name="REF" max="20" required="n" comment="Refering Provider provider secondary id" />
-				</Loop>
-				<Loop name="L2430" max="15" required="n">
-					<Segment name="SVD" max="1"  required="n" comment="Line adjudication information" />
-					<Segment name="CAS" max="5"  required="n" comment="Line adjustment" />
-					<Segment name="DTP" max="1"  required="y" comment="Line check or remittance date" />
-					<Segment name="AMT" max="1"  required="n" comment="Remaining patient liability" />
+
+					<Loop name="L2410" max="1" required="n" >
+						<Segment name="LIN" max="1"  required="n" comment="Drug identification" />
+						<Segment name="CTP" max="1"  required="y" comment="Drug Quantity" />
+						<Segment name="REF" max="1"  required="n" comment="Prescription or compound drug association number" />
+					</Loop>
+					<Loop name="L2420A" max="1" required="n" >
+						<Segment name="NM1" max="1"  required="n" comment="Rendering provider name" />
+						<Segment name="PRV" max="1"  required="n" comment="Rendering provider specialty information" />
+						<Segment name="REF" max="20" required="n" comment="Rendering provider secondary id" />
+					</Loop>
+					<Loop name="L2420B" max="1" required="n" >
+						<Segment name="NM1" max="1"  required="n" comment="Purchased service provider name" />
+						<Segment name="REF" max="20" required="n" comment="Purchased service provider secondary id" />
+					</Loop>
+					<Loop name="L2420C" max="1" required="n" comment="Rendering Provider">
+						<Segment name="NM1" max="1"  required="n" comment="Rendering Provider location name" />
+						<Segment name="N3"  max="1"  required="y" comment="Rendering Provider location address" />
+						<Segment name="N4"  max="1"  required="y" comment="Rendering Provider location city/state/zip" />
+						<Segment name="REF" max="3"  required="n" comment="Rendering Provider location secondary id" />
+					</Loop>
+					<Loop name="L2420D" max="1" required="n" comment="Refering Provider">
+						<Segment name="NM1" max="1"  required="n" comment="Refering Provider provider name" />
+						<Segment name="REF" max="20" required="n" comment="Refering Provider provider secondary id" />
+					</Loop>
+					<Loop name="L2430" max="15" required="n">
+						<Segment name="SVD" max="1"  required="n" comment="Line adjudication information" />
+						<Segment name="CAS" max="5"  required="n" comment="Line adjustment" />
+						<Segment name="DTP" max="1"  required="y" comment="Line check or remittance date" />
+						<Segment name="AMT" max="1"  required="n" comment="Remaining patient liability" />
+					</Loop>
 				</Loop>
 			</Loop>
 			<Segment name="SE" required="y" />
